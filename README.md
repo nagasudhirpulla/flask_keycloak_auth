@@ -1,0 +1,2 @@
+* This is a sample Flask application that uses Keycloak for user authentication and role based authorization
+* OAuth 2.0 Authorization Code flow is used by the Flask application to delegate user authentication to Keycloak

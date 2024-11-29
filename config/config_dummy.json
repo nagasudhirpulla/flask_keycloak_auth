@@ -1,0 +1,5 @@
+{
+    "oauthAppClientId": "flaskApp",
+    "oauthAppClientSecret": "dvllvEUnYNRoCMgEfOwdacDZPNMLJ6Yj",
+    "oauthProviderDiscoveryUrl": "http://10.2.100.53:8085/realms/flaskTest/.well-known/openid-configuration"
+}
