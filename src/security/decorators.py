@@ -13,7 +13,7 @@ def login_required(_func=None, *, roles=[]):
                 return redirect(url_for("oauth.login", next=request.url))
             # check user roles
             isRolesPresent = True if len(roles) == 0 else all(
-                [rl in roles for rl in user["roles"]])
+                [rl in user["roles"] for rl in roles])
             if not isRolesPresent:
                 return abort(401)
             return func(*args, **kwargs)

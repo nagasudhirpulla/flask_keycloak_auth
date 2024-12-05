@@ -38,7 +38,7 @@ def login():
 def callback():
     tokenResponse = oauth.keycloak.authorize_access_token()
     idToken = tokenResponse["id_token"]
-    userInfo = tokenResponse["userInfo"]
+    userInfo = tokenResponse["userinfo"]
     # if roles are not included in id token, call user info endpoint explicitly 
     # userInfo = oauth.keycloak.userinfo()
     uRoles = userInfo['resource_access'][oauth.keycloak.client_id]["roles"]
