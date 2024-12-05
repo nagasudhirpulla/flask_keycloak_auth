@@ -37,9 +37,10 @@ def login():
 @oauthPage.route("/login/callback")
 def callback():
     tokenResponse = oauth.keycloak.authorize_access_token()
-
-    userInfo = oauth.keycloak.userinfo()
     idToken = tokenResponse["id_token"]
+    userInfo = tokenResponse["userInfo"]
+    # if roles are not included in id token, call user info endpoint explicitly 
+    # userInfo = oauth.keycloak.userinfo()
     uRoles = userInfo['resource_access'][oauth.keycloak.client_id]["roles"]
     if not (isinstance(uRoles, list)):
         uRoles = [uRoles]
