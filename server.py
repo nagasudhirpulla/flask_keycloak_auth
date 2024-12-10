@@ -12,7 +12,7 @@ initOauthClient()
 
 app = Flask(__name__)
 
-app.secret_key = "hkajshfkhkjhkjhgkf"
+app.secret_key = appConfig.flaskSecret
 
 app.register_blueprint(oauthPage, url_prefix='/oauth')
 

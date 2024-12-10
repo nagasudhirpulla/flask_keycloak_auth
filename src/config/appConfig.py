@@ -7,6 +7,7 @@ class AppConfig:
     oauthAppClientId: str = field(default="")
     oauthAppClientSecret: str = field(default="")
     oauthProviderDiscoveryUrl: str = field(default="")
+    flaskSecret: str = field(default="")
 
 
 def loadAppConfig(fName="config/config.json") -> AppConfig:
